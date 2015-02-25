@@ -6,5 +6,5 @@
  */
 
   echo 41485718;
-  echo 'Brendoon Ryos';
+  echo '<h1 align="center" style="color:blue">Brendoon Ryos</h1>';
 ?>
