@@ -10,32 +10,45 @@ and open the template in the editor.
         <title></title>
         <style>
             table,tr,td{border:solid 1px;}
+            #tr2{background-color: gray;}
         </style>
     </head>
     <body>
         <table>
         <?php
-                echo'<tr>
+            echo'<tr>
                     <td>ID</td>
                     <td>NOME</td>
                     <td>DESC</td>
                 </tr>';
-                $k = 1;
-                for( $i=0; $i<5;$i++){
+            $k = 1;
+            for( $i=0; $i<7;$i++){
+                if(($i%2==0)||($i==0)){
                     echo '<tr>
-                     <td>id</td>
-                     <td>nome</td>
-                     <td>desc</td>
-                    </tr>';
-                    if($k>$i){echo '<tr>
-                     <td>id</td>
-                     <td>nome</td>
-                     <td>desc</td>
-                    </tr>';}
-                    $k++;
+                    <td>id</td>
+                    <td>nome</td>
+                    <td>desc</td>
+                    </tr>'; 
+                }else{
+                     echo '<tr id="tr2">
+                    <td>id</td>
+                    <td>nome</td>
+                    <td>desc</td>
+                    </tr>'; 
                 }
-               
-        
+            }
+                $n = 1193;
+                $cont = 0;
+               for($j=1;$j<=$n;$j++){
+                   if($n%$j==0){
+                       $cont++;
+                   }
+               }
+               if($cont==2){
+                   echo "<p>Número: $n é primo.</p>";
+               }else{
+                   echo "<p>Número: $n não é primo.<p>";
+               }    
 ?>
         </table>
     </body>
