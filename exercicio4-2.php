@@ -39,6 +39,7 @@ and open the template in the editor.
             }
         ?>
         </table>
+        
         <p><?php
              $n = 1193;
                 $cont = 0;
@@ -54,6 +55,7 @@ and open the template in the editor.
                }    
             ?>
         </p>
+        
         <p>
             <?php
                 $n = 10;
