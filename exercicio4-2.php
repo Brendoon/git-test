@@ -37,7 +37,10 @@ and open the template in the editor.
                     </tr>'; 
                 }
             }
-                $n = 1193;
+        ?>
+        </table>
+        <p><?php
+             $n = 1193;
                 $cont = 0;
                for($j=1;$j<=$n;$j++){
                    if($n%$j==0){
@@ -49,7 +52,25 @@ and open the template in the editor.
                }else{
                    echo "<p>Número: $n não é primo.<p>";
                }    
-?>
-        </table>
+            ?>
+        </p>
+        <p>
+            <?php
+                $n = 10;
+                $a = 0;
+                $b = 1;
+                echo "$n números da sequência de Fibonacci :{";
+                echo"$a,$b,";
+                for($i=0;$i<$n;$i++){
+                    $soma = $a +$b;
+                    echo "$soma";
+                    if($i!=$n-1){
+                        echo ',';
+                    }
+                    $a = $b;
+                    $b = $soma;
+                }echo '}';
+            ?>
+        </p>
     </body>
 </html>
